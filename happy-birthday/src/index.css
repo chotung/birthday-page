@@ -6,8 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    background: url(https://i.pinimg.com/originals/3e/a8/f4/3ea8f4a65bbdb3c58ce14c0e36b76454.jpg);
-    background-size: cover;
+    /* background: url(https://i.pinimg.com/originals/3e/a8/f4/3ea8f4a65bbdb3c58ce14c0e36b76454.jpg);
+    background-size: cover; */
+    background-color: darkgrey;
 }
 
 code {
