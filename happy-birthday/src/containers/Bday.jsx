@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import './bday.css'
 
+
 export default class Bday extends Component {
   // constructor(props) {
   //   super(props);
@@ -14,8 +15,10 @@ export default class Bday extends Component {
   }
 
   timeInnerFunc = () => {
-    alert("hello")
+    console.log("Birthday Page")
+    // alert("hello")
   }
+
   
   
   render() {
