@@ -1,2 +1,18 @@
-.wrapper {
+body {
+  background-color: black;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.login {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
 }

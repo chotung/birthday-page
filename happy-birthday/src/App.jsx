@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Bday from "./containers/Bday.jsx"
+import Bday from "./components/Bday.jsx"
 
 
 export default class App extends Component {
@@ -20,14 +20,13 @@ export default class App extends Component {
 
   renderButton = () => {
     return (
-    // <button onClick={event => this.clickStart(event)}> Button</button>
-      <form onSubmit={event => this.clickStart(event)}>
-        <label>
-          Name:
-              <input onChange={this.onChange} type="text" name="name" />
-        </label>
-        <input type="submit" name="submit" />
-      </form>
+      <div className="login">
+        {this.state.error === true ? this.giveError() : null}
+        <form  onSubmit={event => this.clickStart(event)}>
+          <input id="text-box" onChange={this.onChange} type="text" name="name" placeholder="Please Enter Your Name" />
+          <input type="submit" name="submit" />
+        </form>
+      </div>
     )
   }
 
@@ -43,7 +42,8 @@ export default class App extends Component {
     if(this.state.name === "dara"){
       this.setState(prevState => ({
         ...prevState,
-        change:true
+        change:true,
+        error:false
       }))
     } else {
       this.setState(prevState => ({
@@ -63,7 +63,7 @@ export default class App extends Component {
     console.log(this.state)
     return (
         <div className="wrapper">
-          {this.state.error === true ? this.giveError(): null }
+          
           {this.state.name === "dara" && this.state.change === true ? this.renderCom():null}
           {/* render birthday if state is dara */}
           {this.state.change ? null : this.renderButton() }
