@@ -59,11 +59,12 @@ export default class App extends Component {
     )
   }
 
+
+
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
-        <div className="wrapper">
-          
+        <div className="wrapper" >
           {this.state.name === "dara" && this.state.change === true ? this.renderCom():null}
           {/* render birthday if state is dara */}
           {this.state.change ? null : this.renderButton() }
