@@ -1,33 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-import Bday from "./components/Bday.jsx"
-
+// import Bday from "./components/Bday.jsx"
+import Login from "./components/Login.jsx"
+import Youtube from "./components/Youtube";
 
 export default class App extends Component {
   state = {
     change: false,
     name: "",
     error: false
-  }
-
-  renderCom = () => {
-    return (
-      <div>
-        <Bday />
-      </div>
-    )
-  }
-
-  renderButton = () => {
-    return (
-      <div className="login">
-        {this.state.error === true ? this.giveError() : null}
-        <form  onSubmit={event => this.clickStart(event)}>
-          <input id="text-box" onChange={this.onChange} type="text" name="name" placeholder="Please Enter Your Name" />
-          <input type="submit" name="submit" />
-        </form>
-      </div>
-    )
   }
 
   onChange = (e) => {
@@ -39,7 +20,7 @@ export default class App extends Component {
   clickStart = (event) => {
     event.preventDefault()
     //check
-    if(this.state.name === "dara"){
+    if(this.state.name === "poop"){
       this.setState(prevState => ({
         ...prevState,
         change:true,
@@ -52,22 +33,13 @@ export default class App extends Component {
       }))
     }
   }
-
-  giveError = () => {
-    return  (
-      <span className="error">Error</span>
-    )
-  }
-
-
-
+ 
   render() {
-    // console.log(this.state)
     return (
         <div className="wrapper" >
-          {this.state.name === "dara" && this.state.change === true ? this.renderCom():null}
+          {this.state.name === "poop" && this.state.change === true ?<Youtube />:null}
           {/* render birthday if state is dara */}
-          {this.state.change ? null : this.renderButton() }
+          {this.state.change ? null : <Login error={this.state.error}  clickStart={this.clickStart} onChange={this.onChange} /> }
          
         </div>
     )

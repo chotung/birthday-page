@@ -1,9 +1,8 @@
 //Black background transition HAPPY BIRTHDAY!!!
 // timed transition + onclick transition
 import React, { Component } from 'react'
-import './bday.css'
-import YouTube from 'react-youtube'
-
+// import './bday.css'
+import  Message from './Message.jsx'
 
 export default class Bday extends Component {
   state = {
@@ -12,10 +11,7 @@ export default class Bday extends Component {
   }
 
   componentDidMount(event) {
-    this.timerID = setTimeout(
-      () => this.tick(),
-      3000
-    );
+    this.timerID = setTimeout(() => this.tick(), 0);
   }
 
   componentWillUnmount() {
@@ -33,50 +29,13 @@ export default class Bday extends Component {
   }
 
 
-  showHappy = () => {
-    return (
-      <div id="happy-birthday" onClick={() => this.handleClick()}>
-        Happy Birthday
-      <br></br>
-        みうめ!!!
-       <h2 onClick={() => this.handleClick()}>Click Here</h2>
-      </div>
-    )
-  }
-  _onReady = (event) => {
-    // access to player in all event handlers via event.target
-    // event.target.pauseVideo();
-  }
 
   render() {
-    // console.log(this.state)
-    const opts = {
-      height: '1000rem',
-      width: '100%',
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        loop: 1,
-      }
-    };
-
     return (
     <div className="happy-container">
-      {this.state.happy ? this.showHappy() : null}
-       <div className="video-container">
-          <YouTube
-            videoId="iWZmdoY1aTE"
-            opts={opts}
-            onReady={this._onReady}
-          />
-        </div>
-
+      {this.state.happy ? <Message handleClick={this.handleClick}/> : null}
     </div>
     )
   }
 }
 
-//  <iframe width="100%" height="1000px" src="https://www.youtube.com/embed/iWZmdoY1aTE?autoplay=1&controls=0&loop=1" frameBorder="0" 
-//         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
-//         >
-//         </iframe>   
