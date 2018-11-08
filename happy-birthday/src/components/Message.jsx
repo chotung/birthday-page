@@ -3,9 +3,7 @@ import React from 'react'
 const Message = (props) => {
   return (
     <div id="happy-birthday" onClick={() => props.handleClick()} >
-      
-        <br></br>
-        Click Here
+      <h1>Click Here</h1>
     </div>
   )
 }
