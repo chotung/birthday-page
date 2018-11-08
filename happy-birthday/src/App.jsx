@@ -20,7 +20,7 @@ export default class App extends Component {
   clickStart = (event) => {
     event.preventDefault()
     //check
-    if(this.state.name.toLowerCase() === "dara"){
+    if(this.state.name.toLowerCase() === "charlie"){
       this.setState(prevState => ({
         ...prevState,
         change:true,
@@ -37,7 +37,7 @@ export default class App extends Component {
   render() {
     return (
         <div className="wrapper" >
-          {this.state.name.toLowerCase() === "dara" && this.state.change === true ?<Youtube />:null}
+          {this.state.name.toLowerCase() === "charlie" && this.state.change === true ?<Youtube />:null}
           {/* render birthday if state is dara */}
           {this.state.change ? null : <Login error={this.state.error}  clickStart={this.clickStart} onChange={this.onChange} /> }
          
