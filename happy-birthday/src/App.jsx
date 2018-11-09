@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 // import Bday from "./components/Bday.jsx"
 import Login from "./components/Login.jsx"
-import Youtube from "./components/Youtube";
+import VideoContainer from "./components/Video-container";
 
 export default class App extends Component {
   state = {
@@ -20,7 +20,7 @@ export default class App extends Component {
   clickStart = (event) => {
     event.preventDefault()
     //check
-    if(this.state.name.toLowerCase() === "charlie"){
+    if(this.state.name.toLowerCase() === "dara"){
       this.setState(prevState => ({
         ...prevState,
         change:true,
@@ -37,7 +37,7 @@ export default class App extends Component {
   render() {
     return (
         <div className="wrapper" >
-          {this.state.name.toLowerCase() === "charlie" && this.state.change === true ?<Youtube />:null}
+          {this.state.name.toLowerCase() === "dara" && this.state.change === true ?<VideoContainer />:null}
           {/* render birthday if state is dara */}
           {this.state.change ? null : <Login error={this.state.error}  clickStart={this.clickStart} onChange={this.onChange} /> }
          
@@ -47,18 +47,26 @@ export default class App extends Component {
 }
 
 
-//change the state to match the target value onChange set state
-// on the click checks the state
+//testing three.js
+// import React, { Component } from 'react';
+// import * as THREE from 'three'
+
+// class App extends Component {
+//   render() {
+//     const scene = new THREE.Scene()
+//     return (
+//       <div>
+        
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
 
 
-// //click button then
 
 
-
-
-
-
-// // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 // // add fireworks or something
