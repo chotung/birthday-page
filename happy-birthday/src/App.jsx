@@ -7,7 +7,7 @@ import VideoContainer from "./components/Video-container";
 export default class App extends Component {
   state = {
     change: false,
-    name: "",
+    name: "Prof. Oak",
     error: false
   }
 
@@ -15,6 +15,10 @@ export default class App extends Component {
     this.setState({
       name: e.target.value
     })
+    this.setState(prevState => ({
+      ...prevState,
+      error: false
+    }))
   }
 
   clickStart = (event) => {
@@ -39,7 +43,7 @@ export default class App extends Component {
         <div className="wrapper" >
           {this.state.name.toLowerCase() === "dara" && this.state.change === true ?<VideoContainer />:null}
           {/* render birthday if state is dara */}
-          {this.state.change ? null : <Login error={this.state.error}  clickStart={this.clickStart} onChange={this.onChange} /> }
+          {this.state.change ? null : <Login error={this.state.error}  clickStart={this.clickStart} onChange={this.onChange} name={this.state.name} /> }
          
         </div>
     )
