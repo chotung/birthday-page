@@ -9,7 +9,6 @@ body {
   left: 0;
 }
 
-
 .error {
   color: red;
   font-weight: bold;
@@ -35,7 +34,7 @@ body {
   overflow: hidden;
   background-color: white;
   animation-name: fadeOut;
-  animation-duration: 3s ;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -44,14 +43,22 @@ body {
   height: 100%;
   width: 100%;
   text-align: center;
-  color: white;
+  color: red;
   position: absolute;
   top: 0%;
   left: 0%;
   margin-top: 0px;
   margin-left: 0px;
-  background-color: pink;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://i.kym-cdn.com/photos/images/original/001/172/261/97b.jpg");
+  background-size: cover;
+  background-position: center;
 }
+
+#happy-birthday h1, h3 {
+  animation: blinker 1s linear infinite;
+}
+
 
 #happy-birthday h2 {
   font-size: 20pt;
@@ -78,14 +85,8 @@ body {
   position: absolute;
 }
 
-
-
-
-
-
-
 @keyframes fadeOut {
-  from  {
+  from {
     opacity: 1;
   }
 
@@ -94,3 +95,8 @@ body {
   }
 }
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

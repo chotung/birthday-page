@@ -12,7 +12,52 @@ import Yvideo from "./Yvideo.jsx";
 //   "https://ehealthforum.com/health/images/avatars/11699147425707699031013.jpeg"
 // ];
 
-const vidId = ["ek2PDE1cAyY", "2Vv-BfVoq4g",];
+
+// ek2PDE1cAyY beautiful soul by jesse mccartney
+// 2Vv-BfVoq4g   perfect by ed sheeran
+// gH476CxJxfg bad day by daniel powter
+//0yW7w8F2TVA say you won't let go by james arthur
+// _WS9w10ygpU hello by addle
+//9WbCfHutDSE dangerous woman by ariana grande
+// im going to lose you  meghan trainor ft john legend its broken *revmoed
+// 4bzIpYiPUUo litle did you know alex and serria
+// dKM516jRXvQ perfect two auburn
+//KkGVmN68ByU mercy by shawn mendes
+//C_3d6GntKbk pillowtalk by zayn
+//0RyInjfgNc4 lve on the brain by rihanna
+//MkElfR_NPBI black magic by little mix
+//gBAfejjUQoA touch by little mix
+// UMPLmL2c5dY bedpeace jhene aiko
+// T2sO8gK2IKk only you by little mix
+// N6df6IZL-0k slow motion by trey songz *removed didn't work
+// 8xg3vE8Ie_E love story taylor swift
+// VY1eFxgRR-k back to you selena gomez
+//oozQ4yV__Vw gone gone gone by  philiips phillips
+//450p7goxZqg all of me by john legend
+const vidId = [
+  "_WS9w10ygpU",
+  "ek2PDE1cAyY",
+  "2Vv-BfVoq4g",
+  "gH476CxJxfg",
+  "0yW7w8F2TVA",
+  "9WbCfHutDSE",
+  "4bzIpYiPUUo",
+  "dKM516jRXvQ",
+  "KkGVmN68ByU",
+  "lp-EO5I60KA",
+  "C_3d6GntKbk",
+  "0RyInjfgNc4",
+  "MkElfR_NPBI",
+  "gBAfejjUQoA",
+  "UMPLmL2c5dY",
+  "T2sO8gK2IKk",
+  "8xg3vE8Ie_E",
+  "VY1eFxgRR-k",
+  "7gK3QD2QSRo",
+  "oozQ4yV__Vw",
+  "k6M5C-oKw9k",
+  "450p7goxZqg"
+];
 
 export default class Slideshow extends Component {
   state = {

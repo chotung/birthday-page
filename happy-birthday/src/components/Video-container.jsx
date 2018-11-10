@@ -31,17 +31,15 @@ export default class VideoContainer extends Component {
             }
         };
 
-    return (
-        <div className="video-container">
-            {this.state.overlayOn ? <Overlay /> : null}
-            {this.state.videoOver ? <Bday /> : <Yvideo videoId="iWZmdoY1aTE" opts={opts} onEnd={() => this.onVideoEnd()}
-            />}
-            {/* {render message conditionally after the video is done} */}
-        </div>
-    )
+    return <div className="video-container">
+        {this.state.overlayOn ? <Overlay /> : null}
+        {this.state.videoOver ? <Bday /> : <Yvideo videoId="h_m-BjrxmgI" opts={opts} onEnd={() => this.onVideoEnd()} />}
+        {/* {render message conditionally after the video is done} */}
+        {<Bday />}
+      </div>;
   }
 }
-
+//song hey there delilah
 
 
 
