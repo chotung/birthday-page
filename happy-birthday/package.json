@@ -14,10 +14,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scricapts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "engines": {
+    "npm": "6.2.0",
+    "node": "10.9.0"
   },
   "browserslist": [
     ">0.2%",
