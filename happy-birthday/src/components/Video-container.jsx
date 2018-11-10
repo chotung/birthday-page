@@ -30,11 +30,11 @@ export default class VideoContainer extends Component {
                 loop: 1
             }
         };
-        
+
     return (
         <div className="video-container">
             {this.state.overlayOn ? <Overlay /> : null}
-            {this.state.videoOver ? <Bday /> :<Yvideo videoId="QohH89Eu5iM" opts={opts} onEnd={() => this.onVideoEnd()}
+            {this.state.videoOver ? <Bday /> : <Yvideo videoId="iWZmdoY1aTE" opts={opts} onEnd={() => this.onVideoEnd()}
             />}
             {/* {render message conditionally after the video is done} */}
         </div>
