@@ -35,7 +35,7 @@ export default class VideoContainer extends Component {
         {this.state.overlayOn ? <Overlay /> : null}
         {this.state.videoOver ? <Bday /> : <Yvideo videoId="h_m-BjrxmgI" opts={opts} onEnd={() => this.onVideoEnd()} />}
         {/* {render message conditionally after the video is done} */}
-        {<Bday />}
+        {/* {<Bday />} */}
       </div>;
   }
 }
